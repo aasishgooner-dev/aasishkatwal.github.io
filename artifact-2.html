@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Machine Learning vs. Deep Learning portfolio artifact by Aasish Katwal.">
+    <title>Machine Learning vs. Deep Learning | Aasish Katwal</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .artifact2-hero {
+            padding: 110px 24px 85px;
+            background:
+                radial-gradient(circle at top right, #dce9ff, transparent 35%),
+                linear-gradient(135deg, #f7f9fc, #edf3fc);
+        }
+        .artifact2-container {
+            width: 100%;
+            max-width: var(--maximum-width, 1120px);
+            margin: 0 auto;
+        }
+        .artifact2-hero h1 {
+            max-width: 920px;
+            margin: 0;
+            font-size: clamp(2.8rem, 6vw, 5rem);
+            letter-spacing: -0.045em;
+        }
+        .artifact2-lead {
+            max-width: 820px;
+            margin-top: 24px;
+            color: var(--muted, #566276);
+            font-size: 1.2rem;
+        }
+        .artifact2-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 28px;
+        }
+        .artifact2-tags span,
+        .skill-chip {
+            display: inline-block;
+            padding: 8px 13px;
+            background: #fff;
+            border: 1px solid var(--border, #d7deea);
+            border-radius: 999px;
+            color: var(--primary-dark, #103a7c);
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+        .artifact2-content {
+            padding: 80px 24px 110px;
+        }
+        .artifact2-layout {
+            display: grid;
+            grid-template-columns: 230px minmax(0, 1fr);
+            gap: 60px;
+            align-items: start;
+        }
+        .artifact2-sidebar {
+            position: sticky;
+            top: 100px;
+        }
+        .artifact2-sidebar nav {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding: 22px;
+            background: #fff;
+            border: 1px solid var(--border, #d7deea);
+            border-radius: 14px;
+        }
+        .artifact2-sidebar a {
+            color: var(--muted, #566276);
+            font-size: 0.93rem;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .artifact2-sidebar a:hover,
+        .artifact2-sidebar a:focus {
+            color: var(--primary, #174ea6);
+        }
+        .sidebar-title {
+            margin: 0 0 8px;
+            font-weight: 800;
+        }
+        .artifact2-section {
+            padding: 0 0 72px;
+            scroll-margin-top: 110px;
+        }
+        .artifact2-section + .artifact2-section {
+            padding-top: 72px;
+            border-top: 1px solid var(--border, #d7deea);
+        }
+        .section-label {
+            margin: 0 0 8px;
+            color: var(--primary, #174ea6);
+            font-size: 0.82rem;
+            font-weight: 800;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+        }
+        .artifact2-section h2 {
+            margin: 0 0 24px;
+            font-size: clamp(1.9rem, 4vw, 2.8rem);
+            letter-spacing: -0.035em;
+        }
+        .artifact2-section p,
+        .artifact2-section li {
+            color: var(--muted, #566276);
+        }
+        .comparison-grid,
+        .evidence-grid,
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+            margin-top: 32px;
+        }
+        .concept-card,
+        .value-card,
+        .evidence-card {
+            padding: 24px;
+            background: #fff;
+            border: 1px solid var(--border, #d7deea);
+            border-radius: 14px;
+        }
+        .concept-card h3,
+        .value-card h3,
+        .evidence-card h3 {
+            margin-top: 0;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            margin-top: 30px;
+        }
+        .comparison-table th,
+        .comparison-table td {
+            padding: 16px;
+            border: 1px solid var(--border, #d7deea);
+            text-align: left;
+            vertical-align: top;
+        }
+        .comparison-table th {
+            background: var(--alternate, #eef2f7);
+        }
+        .process-list {
+            display: grid;
+            gap: 18px;
+            margin-top: 28px;
+        }
+        .process-item {
+            display: grid;
+            grid-template-columns: 48px minmax(0, 1fr);
+            gap: 18px;
+            padding: 22px;
+            background: #fff;
+            border: 1px solid var(--border, #d7deea);
+            border-radius: 14px;
+        }
+        .process-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: var(--primary, #174ea6);
+            color: #fff;
+            font-weight: 800;
+        }
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .evidence-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 230px;
+        }
+        .evidence-card .button {
+            align-self: flex-start;
+            margin-top: 12px;
+        }
+        .artifact2-navigation {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 16px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border, #d7deea);
+        }
+        @media (max-width: 900px) {
+            .artifact2-layout {
+                grid-template-columns: 1fr;
+            }
+            .artifact2-sidebar {
+                position: static;
+            }
+            .artifact2-sidebar nav {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .sidebar-title {
+                width: 100%;
+            }
+        }
+        @media (max-width: 680px) {
+            .comparison-grid,
+            .evidence-grid,
+            .value-grid {
+                grid-template-columns: 1fr;
+            }
+            .process-item {
+                grid-template-columns: 1fr;
+            }
+            .artifact2-navigation {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navigation" aria-label="Main navigation">
+            <a class="logo" href="index.html">Aasish Katwal</a>
+            <div class="nav-links">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#value">Value Proposition</a>
+                <a href="index.html#artifacts">Artifacts</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="artifact2-hero">
+            <div class="artifact2-container">
+                <p class="eyebrow">Professional Portfolio - Artifact 2</p>
+                <h1>Machine Learning vs. Deep Learning</h1>
+                <p class="artifact2-lead">
+                    A practical comparison of traditional machine learning and deep learning
+                    through house-price prediction and facial image recognition.
+                </p>
+                <div class="artifact2-tags" aria-label="Project topics">
+                    <span>Machine Learning</span>
+                    <span>Deep Learning</span>
+                    <span>Regression</span>
+                    <span>Convolutional Neural Networks</span>
+                    <span>Technical Communication</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="artifact2-content">
+            <div class="artifact2-container">
+                <div class="artifact2-layout">
+                    <aside class="artifact2-sidebar">
+                        <nav aria-label="Artifact sections">
+                            <p class="sidebar-title">Artifact Sections</p>
+                            <a href="#introduction">Introduction</a>
+                            <a href="#description">Description</a>
+                            <a href="#objective">Objective</a>
+                            <a href="#examples">Examples</a>
+                            <a href="#comparison">Comparison</a>
+                            <a href="#process">Process</a>
+                            <a href="#tools">Tools</a>
+                            <a href="#lessons">Lessons Learned</a>
+                            <a href="#value">Value Proposition</a>
+                            <a href="#evidence">Evidence</a>
+                        </nav>
+                    </aside>
+
+                    <article>
+                        <section id="introduction" class="artifact2-section">
+                            <p class="section-label">Introduction</p>
+                            <h2>Choosing the right AI approach for the problem</h2>
+                            <p>
+                                Machine learning and deep learning are related branches of artificial
+                                intelligence, but they differ in how they process information and learn
+                                patterns. Traditional machine learning commonly depends on human-selected
+                                features, while deep learning uses multilayer neural networks that can learn
+                                useful features directly from raw data.
+                            </p>
+                            <p>
+                                This artifact compares the two approaches through one structured-data problem
+                                and one unstructured-data problem. The analysis shows why the most advanced
+                                model is not always the most appropriate model.
+                            </p>
+                        </section>
+
+                        <section id="description" class="artifact2-section">
+                            <p class="section-label">Description</p>
+                            <h2>Project overview</h2>
+                            <p>
+                                The report examines house-price prediction as a traditional machine learning
+                                application and facial image recognition as a deep learning application. For
+                                each example, it describes a real-world use case, explains why the selected
+                                modeling approach is suitable, and evaluates why the alternative approach
+                                would be less appropriate.
+                            </p>
+                        </section>
+
+                        <section id="objective" class="artifact2-section">
+                            <p class="section-label">Objective</p>
+                            <h2>Project goal</h2>
+                            <p>
+                                The objective was to demonstrate a clear understanding of the differences
+                                between traditional machine learning and deep learning by connecting each
+                                approach to a realistic business or technology problem.
+                            </p>
+                            <ul>
+                                <li>Explain how structured and unstructured data affect model selection.</li>
+                                <li>Compare feature engineering, computational requirements, and interpretability.</li>
+                                <li>Connect regression and convolutional neural networks to real-world applications.</li>
+                                <li>Show why model selection should be based on problem characteristics rather than complexity alone.</li>
+                            </ul>
+                        </section>
+
+                        <section id="examples" class="artifact2-section">
+                            <p class="section-label">Selected Examples</p>
+                            <h2>Traditional ML and deep learning applications</h2>
+                            <div class="comparison-grid">
+                                <div class="concept-card">
+                                    <h3>House-Price Prediction</h3>
+                                    <p>
+                                        A regression model can use structured variables such as square footage,
+                                        bedroom count, property age, neighborhood, lot size, school quality, and
+                                        recent sale prices to estimate a home's market value.
+                                    </p>
+                                    <p>
+                                        This approach is useful for real-estate platforms, mortgage lenders,
+                                        property investors, and automated valuation systems.
+                                    </p>
+                                </div>
+
+                                <div class="concept-card">
+                                    <h3>Facial Image Recognition</h3>
+                                    <p>
+                                        A convolutional neural network can process raw image pixels and learn
+                                        hierarchical visual features, beginning with edges and textures and
+                                        progressing to facial structures and relationships.
+                                    </p>
+                                    <p>
+                                        This approach is useful for smartphone authentication, identity
+                                        verification, secure access, photo organization, and fraud prevention.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="comparison" class="artifact2-section">
+                            <p class="section-label">Comparison</p>
+                            <h2>Why each approach fits its selected problem</h2>
+                            <div style="overflow-x:auto;">
+                                <table class="comparison-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Factor</th>
+                                            <th>Traditional Machine Learning</th>
+                                            <th>Deep Learning</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Data type</td>
+                                            <td>Best suited to structured rows and columns with clearly defined variables.</td>
+                                            <td>Well suited to complex unstructured data such as images, audio, video, and text.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Feature engineering</td>
+                                            <td>Usually requires humans to select and prepare relevant features.</td>
+                                            <td>Can learn useful features automatically through multiple neural-network layers.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Data requirements</td>
+                                            <td>Can perform well with moderately sized datasets.</td>
+                                            <td>Usually benefits from large and varied training datasets.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Computational cost</td>
+                                            <td>Generally faster and less computationally demanding.</td>
+                                            <td>Usually requires more processing power, memory, and training time.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Interpretability</td>
+                                            <td>Often easier to explain through coefficients or feature importance.</td>
+                                            <td>Frequently more difficult to interpret because of complex internal representations.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Selected example</td>
+                                            <td>House-price prediction using regression.</td>
+                                            <td>Facial recognition using a convolutional neural network.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <section id="process" class="artifact2-section">
+                            <p class="section-label">Process</p>
+                            <h2>How the artifact was developed</h2>
+                            <div class="process-list">
+                                <div class="process-item">
+                                    <div class="process-number">1</div>
+                                    <div>
+                                        <h3>Reviewed foundational concepts</h3>
+                                        <p>I reviewed the course material on feature engineering, neural networks, structured data, and unstructured data.</p>
+                                    </div>
+                                </div>
+                                <div class="process-item">
+                                    <div class="process-number">2</div>
+                                    <div>
+                                        <h3>Selected contrasting examples</h3>
+                                        <p>I chose house-price prediction and facial recognition because they clearly demonstrate how data type and problem complexity affect model choice.</p>
+                                    </div>
+                                </div>
+                                <div class="process-item">
+                                    <div class="process-number">3</div>
+                                    <div>
+                                        <h3>Analyzed suitability</h3>
+                                        <p>I evaluated data structure, feature engineering, computational needs, interpretability, and practical deployment considerations.</p>
+                                    </div>
+                                </div>
+                                <div class="process-item">
+                                    <div class="process-number">4</div>
+                                    <div>
+                                        <h3>Compared the alternatives</h3>
+                                        <p>I explained why deep learning would add unnecessary complexity to a structured regression problem and why traditional methods would struggle with raw image variability.</p>
+                                    </div>
+                                </div>
+                                <div class="process-item">
+                                    <div class="process-number">5</div>
+                                    <div>
+                                        <h3>Revised for a professional audience</h3>
+                                        <p>I reorganized the coursework into a concise portfolio case study with clear headings, a comparison table, practical examples, and downloadable evidence.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="tools" class="artifact2-section">
+                            <p class="section-label">Tools and Technologies</p>
+                            <h2>Skills demonstrated</h2>
+                            <div class="skill-list">
+                                <span class="skill-chip">Machine Learning Concepts</span>
+                                <span class="skill-chip">Deep Learning Concepts</span>
+                                <span class="skill-chip">Linear Regression</span>
+                                <span class="skill-chip">Convolutional Neural Networks</span>
+                                <span class="skill-chip">Feature Engineering</span>
+                                <span class="skill-chip">Technical Analysis</span>
+                                <span class="skill-chip">Professional Writing</span>
+                                <span class="skill-chip">Microsoft Word</span>
+                                <span class="skill-chip">GitHub Pages</span>
+                                <span class="skill-chip">HTML and CSS</span>
+                            </div>
+                        </section>
+
+                        <section id="lessons" class="artifact2-section">
+                            <p class="section-label">Challenges and Lessons Learned</p>
+                            <h2>Key learning outcomes</h2>
+                            <p>
+                                The most important lesson was that model selection should begin with the
+                                characteristics of the problem. Structured property data does not automatically
+                                benefit from a complex neural network, especially when efficiency and
+                                interpretability are important. Conversely, image recognition depends on
+                                automatically learning complex patterns that would be difficult to define
+                                manually.
+                            </p>
+                            <p>
+                                I also strengthened my ability to explain technical concepts to a mixed audience.
+                                Instead of focusing only on definitions, I connected each approach to practical
+                                constraints such as data availability, computational resources, interpretability,
+                                and operational value.
+                            </p>
+                        </section>
+
+                        <section id="value" class="artifact2-section">
+                            <p class="section-label">Artifact-Specific Value Proposition</p>
+                            <h2>Unique value and relevance</h2>
+                            <div class="value-grid">
+                                <div class="value-card">
+                                    <h3>Unique Value</h3>
+                                    <p>
+                                        This artifact demonstrates my ability to analyze foundational machine
+                                        learning concepts and explain them through practical, real-world examples.
+                                        It shows that I can compare modeling approaches, evaluate tradeoffs, and
+                                        communicate technical reasoning clearly.
+                                    </p>
+                                </div>
+                                <div class="value-card">
+                                    <h3>Professional Relevance</h3>
+                                    <p>
+                                        The artifact is relevant to employers and technical teams because selecting
+                                        an AI approach requires evaluating business needs, data characteristics,
+                                        computational resources, interpretability, and expected outcomes rather than
+                                        simply choosing the most complex technology.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="evidence" class="artifact2-section">
+                            <p class="section-label">Evidence</p>
+                            <h2>Completed coursework and downloadable report</h2>
+                            <div class="evidence-grid">
+                                <div class="evidence-card">
+                                    <h3>Complete Report</h3>
+                                    <p>
+                                        Review the full five-page Machine Learning vs. Deep Learning report,
+                                        including both real-world examples, suitability analysis, alternative
+                                        approach analysis, comparison, and conclusion.
+                                    </p>
+                                    <a class="button primary-button"
+                                       href="assets/evidence/Aasish_Katwal_Machine_Learning_vs_Deep_Learning.pdf"
+                                       target="_blank"
+                                       rel="noopener noreferrer">
+                                        View Complete Report
+                                    </a>
+                                </div>
+                                <div class="evidence-card">
+                                    <h3>Key Finding</h3>
+                                    <p>
+                                        Deep learning is not automatically better than traditional machine learning.
+                                        The correct choice depends on data type, data volume, interpretability,
+                                        computational requirements, and the complexity of the patterns being learned.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <div class="artifact2-navigation">
+                            <a class="button secondary-button" href="index.html#artifacts">← Return to Portfolio</a>
+                            <a class="button primary-button" href="#evidence">View Project Evidence</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Aasish Katwal. All rights reserved.</p>
+    </footer>
+</body>
+</html>
