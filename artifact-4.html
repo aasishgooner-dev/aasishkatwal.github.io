@@ -1,210 +1,725 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Artifact 4 | Machine Learning Data Challenges</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Applying Machine Learning to Real-World Data Challenges portfolio artifact by Aasish Katwal."
+    >
+
+    <title>
+        Applying Machine Learning to Real-World Data Challenges | Aasish Katwal
+    </title>
+
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <header class="site-header">
-    <div class="container">
-      <h1>Professional Portfolio</h1>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="artifact-1.html">Artifact 1</a>
-        <a href="artifact-2.html">Artifact 2</a>
-        <a href="artifact-3.html">Artifact 3</a>
-        <a href="artifact-4.html">Artifact 4</a>
-      </nav>
-    </div>
-  </header>
+    <header class="site-header">
+        <nav class="navigation" aria-label="Main navigation">
+            <a class="logo" href="index.html">Aasish Katwal</a>
 
-  <main class="container artifact-page">
-    <section class="hero">
-      <p class="eyebrow">Professional Portfolio Artifact 4</p>
-      <h2>Applying Machine Learning to Real-World Data Challenges</h2>
-      <p class="lead">
-        This artifact demonstrates my ability to analyze practical machine
-        learning problems involving missing data, imbalanced datasets, data
-        drift, concept drift, production monitoring, and large language model
-        maintenance.
-      </p>
-    </section>
+            <div class="nav-links">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#value">Value Proposition</a>
+                <a href="index.html#artifacts">Artifacts</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
 
-    <section class="content-section">
-      <h3>Objective</h3>
-      <p>
-        The objective of this artifact was to apply foundational machine
-        learning concepts to realistic business scenarios. The activity
-        required me to explain my decisions, evaluate trade-offs, respond to
-        feedback, and improve my solutions using production-oriented machine
-        learning practices.
-      </p>
-    </section>
+    <main>
+        <section class="artifact-hero">
+            <div class="artifact-page-container">
+                <p class="eyebrow">
+                    Professional Portfolio — Artifact 4
+                </p>
 
-    <section class="content-section">
-      <h3>Process</h3>
-      <ol>
-        <li>Reviewed each machine learning scenario and identified the primary data challenge.</li>
-        <li>Developed an initial solution based on technical and business requirements.</li>
-        <li>Explained the reasoning behind preprocessing, evaluation, and monitoring decisions.</li>
-        <li>Reviewed feedback provided by the AI coach.</li>
-        <li>Revised each response to include stronger validation and production considerations.</li>
-        <li>Extended the discussion to model monitoring and LLM system maintenance.</li>
-      </ol>
-    </section>
+                <h1>
+                    Applying Machine Learning to Real-World Data Challenges
+                </h1>
 
-    <section class="content-section">
-      <h3>Tools and Methods</h3>
-      <ul>
-        <li>Random Forest</li>
-        <li>XGBoost and LightGBM</li>
-        <li>SMOTE and class weighting</li>
-        <li>Precision, recall, F1-score, AUC, and confusion matrices</li>
-        <li>Population Stability Index</li>
-        <li>Kolmogorov-Smirnov test</li>
-        <li>Chi-square test</li>
-        <li>Cost-sensitive threshold optimization</li>
-        <li>Production model monitoring</li>
-        <li>AI-assisted inquiry and feedback</li>
-      </ul>
-    </section>
+                <p class="artifact-lead">
+                    An inquiry-based learning activity focused on missing data,
+                    imbalanced classification, cost-sensitive decision-making,
+                    data drift, concept drift, production monitoring, and
+                    large language model maintenance.
+                </p>
 
-    <section class="content-section">
-      <h3>Key Challenges Addressed</h3>
+                <div class="artifact-tags">
+                    <span>Missing Data</span>
+                    <span>Class Imbalance</span>
+                    <span>Fraud Detection</span>
+                    <span>Data Drift</span>
+                    <span>Model Monitoring</span>
+                </div>
+            </div>
+        </section>
 
-      <h4>Missing Data</h4>
-      <p>
-        I evaluated why values were missing before choosing an imputation
-        strategy. I considered missing-value indicators, feature importance,
-        and distribution checks to avoid removing useful information or
-        introducing bias.
-      </p>
+        <section class="artifact-content-section">
+            <div class="artifact-page-container">
+                <div class="artifact-layout">
+                    <aside class="artifact-sidebar">
+                        <nav aria-label="Artifact sections">
+                            <p class="sidebar-title">
+                                Artifact Sections
+                            </p>
 
-      <h4>Imbalanced Fraud Detection</h4>
-      <p>
-        I prioritized recall because missed fraud carried a much higher
-        financial cost than false alarms. I used class-balancing techniques,
-        business-cost analysis, and threshold optimization instead of relying
-        on overall accuracy.
-      </p>
+                            <a href="#introduction">Introduction</a>
+                            <a href="#description">Description</a>
+                            <a href="#objective">Objective</a>
+                            <a href="#concepts">Key Concepts</a>
+                            <a href="#process">Process</a>
+                            <a href="#tools">Tools</a>
+                            <a href="#lessons">Lessons Learned</a>
+                            <a href="#value-proposition">
+                                Value Proposition
+                            </a>
+                            <a href="#evidence">Evidence</a>
+                        </nav>
+                    </aside>
 
-      <h4>Data Drift and Concept Drift</h4>
-      <p>
-        I distinguished changes in input distributions from changes in the
-        relationship between features and outcomes. I proposed statistical
-        drift testing, feature analysis, retraining, new feature engineering,
-        and separate segment models when necessary.
-      </p>
+                    <article class="artifact-main">
+                        <section
+                            id="introduction"
+                            class="artifact-section"
+                        >
+                            <p class="section-label">Introduction</p>
 
-      <h4>Production and LLM Monitoring</h4>
-      <p>
-        I explored model performance, data quality, business metrics,
-        explainability, retraining, hallucination detection, prompt versioning,
-        safety, latency, cost, and regression testing across model versions.
-      </p>
-    </section>
+                            <h2>
+                                Solving practical machine learning problems
+                            </h2>
 
-    <section class="content-section">
-      <h3>Feedback and Revisions</h3>
-      <p>
-        The AI coach encouraged me to go beyond general recommendations and
-        explain how I would validate each decision. I revised my responses by
-        adding feature-importance checks, missingness analysis, imputation
-        validation, cost-based threshold selection, statistical drift tests,
-        and segment-specific retraining strategies.
-      </p>
-    </section>
+                            <p>
+                                This artifact documents an inquiry-based
+                                learning activity in which I analyzed three
+                                realistic machine learning scenarios. The
+                                activity focused on preparing incomplete data,
+                                handling severe class imbalance, and diagnosing
+                                changes in production data and model behavior.
+                            </p>
 
-    <section class="content-section">
-      <h3>Lessons Learned</h3>
-      <p>
-        I learned that successful machine learning systems depend on more than
-        model accuracy. Data quality, business costs, validation methods,
-        monitoring, and continuous improvement are all essential. I also
-        learned that production AI systems must be evaluated for reliability,
-        safety, cost, and changing user behavior over time.
-      </p>
-    </section>
+                            <p>
+                                The discussion also extended into production
+                                monitoring and the additional challenges created
+                                when traditional machine learning systems are
+                                integrated with large language models.
+                            </p>
+                        </section>
 
-    <section class="content-section">
-      <h3>Value Proposition</h3>
-      <p>
-        This artifact demonstrates my ability to approach machine learning from
-        both technical and business perspectives. It shows that I can identify
-        data problems, select appropriate methods, evaluate trade-offs, respond
-        to feedback, and develop solutions that are suitable for production
-        environments.
-      </p>
-    </section>
+                        <section
+                            id="description"
+                            class="artifact-section"
+                        >
+                            <p class="section-label">Description</p>
 
-    <section class="content-section evidence-section">
-      <h3>Evidence</h3>
+                            <h2>Project overview</h2>
 
-      <p>
-        The supporting report and screenshots document my original responses,
-        the feedback I received, and the revisions I made throughout the
-        activity.
-      </p>
+                            <p>
+                                The activity followed a guided scenario-and-
+                                feedback format. I first proposed a solution,
+                                explained my reasoning, reviewed feedback from
+                                the AI coach, and then revised my response to
+                                strengthen the technical and business analysis.
+                            </p>
 
-      <p>
-        <a class="button"
-           href="assets/evidence/artifact-4/Aasish_Katwal_Applying_Machine_Learning_to_Real_World_Data_Challenges.pdf"
-           target="_blank">
-          View Supporting Report
-        </a>
-      </p>
+                            <p>
+                                The three scenarios addressed customer churn
+                                data with missing values, fraud detection with
+                                only 0.8% fraudulent transactions, and a credit
+                                risk model affected by a new digital lending
+                                customer segment.
+                            </p>
+                        </section>
 
-      <div class="evidence-grid">
-        <figure>
-          <img src="assets/evidence/artifact-4/artifact4-scenario1-initial.png"
-               alt="Initial response to the missing data scenario">
-          <figcaption>Scenario 1: Initial missing-data analysis</figcaption>
-        </figure>
+                        <section
+                            id="objective"
+                            class="artifact-section"
+                        >
+                            <p class="section-label">Objective</p>
 
-        <figure>
-          <img src="assets/evidence/artifact-4/artifact4-scenario1-revision.png"
-               alt="Revised response after missing data feedback">
-          <figcaption>Scenario 1: Feedback and revision</figcaption>
-        </figure>
+                            <h2>Project goal</h2>
 
-        <figure>
-          <img src="assets/evidence/artifact-4/artifact4-scenario2-cost-threshold.png"
-               alt="Fraud detection threshold optimization discussion">
-          <figcaption>Scenario 2: Cost-sensitive fraud detection</figcaption>
-        </figure>
+                            <p>
+                                The objective was to apply foundational machine
+                                learning concepts to realistic business
+                                situations and demonstrate how technical
+                                decisions should be validated before models are
+                                deployed or updated.
+                            </p>
 
-        <figure>
-          <img src="assets/evidence/artifact-4/artifact4-scenario3-drift-analysis.png"
-               alt="Data drift and concept drift analysis">
-          <figcaption>Scenario 3: Drift detection and retraining</figcaption>
-        </figure>
+                            <ul class="artifact-list">
+                                <li>
+                                    Select appropriate strategies for handling
+                                    missing values.
+                                </li>
 
-        <figure>
-          <img src="assets/evidence/artifact-4/artifact4-monitoring-discussion.png"
-               alt="Production and LLM monitoring discussion">
-          <figcaption>Production and LLM monitoring</figcaption>
-        </figure>
+                                <li>
+                                    Evaluate imbalanced classification using
+                                    business-relevant metrics.
+                                </li>
 
-        <figure>
-          <img src="assets/evidence/artifact-4/artifact4-completion-summary.png"
-               alt="Completion summary from the AI coach">
-          <figcaption>Final coaching summary</figcaption>
-        </figure>
-      </div>
-    </section>
+                                <li>
+                                    Optimize prediction thresholds using
+                                    financial costs.
+                                </li>
 
-    <p class="back-link">
-      <a href="index.html">← Back to Portfolio Home</a>
-    </p>
-  </main>
+                                <li>
+                                    Distinguish data drift from concept drift.
+                                </li>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2026 Aasish Katwal</p>
-    </div>
-  </footer>
+                                <li>
+                                    Recommend practical model-monitoring and
+                                    maintenance strategies.
+                                </li>
+                            </ul>
+                        </section>
+
+                        <section
+                            id="concepts"
+                            class="artifact-section"
+                        >
+                            <p class="section-label">Key Concepts</p>
+
+                            <h2>Machine learning challenges addressed</h2>
+
+                            <div class="feature-grid">
+                                <div class="feature-card">
+                                    <h3>Missing Data Analysis</h3>
+
+                                    <p>
+                                        I investigated why values were missing
+                                        before selecting an imputation method
+                                        and considered whether missingness itself
+                                        contained predictive information.
+                                    </p>
+                                </div>
+
+                                <div class="feature-card">
+                                    <h3>Feature Preservation</h3>
+
+                                    <p>
+                                        Before dropping a highly incomplete
+                                        feature, I evaluated feature importance,
+                                        churn-rate differences, and missing-value
+                                        indicators.
+                                    </p>
+                                </div>
+
+                                <div class="feature-card">
+                                    <h3>Imbalanced Classification</h3>
+
+                                    <p>
+                                        I used class weighting, SMOTE, recall,
+                                        precision, F1-score, and confusion
+                                        matrices instead of relying on accuracy.
+                                    </p>
+                                </div>
+
+                                <div class="feature-card">
+                                    <h3>Cost-Sensitive Thresholds</h3>
+
+                                    <p>
+                                        I selected the fraud threshold by
+                                        comparing the total expected cost of
+                                        false negatives and false positives on
+                                        validation data.
+                                    </p>
+                                </div>
+
+                                <div class="feature-card">
+                                    <h3>Data and Concept Drift</h3>
+
+                                    <p>
+                                        I distinguished changes in feature
+                                        distributions from changes in the
+                                        relationship between features and
+                                        outcomes.
+                                    </p>
+                                </div>
+
+                                <div class="feature-card">
+                                    <h3>Production Monitoring</h3>
+
+                                    <p>
+                                        I examined performance metrics, data
+                                        quality, drift detection, alerts,
+                                        explainability, retraining, and model
+                                        versioning.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <h3 class="subsection-heading">
+                                Scenario-based solution process
+                            </h3>
+
+                            <div class="process-list">
+                                <div class="process-item">
+                                    <div class="process-number">1</div>
+                                    <div>
+                                        <h3>Investigate the data</h3>
+                                        <p>
+                                            Identify missingness patterns,
+                                            class distributions, segment
+                                            differences, and potential data
+                                            quality issues.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="process-item">
+                                    <div class="process-number">2</div>
+                                    <div>
+                                        <h3>Define the business risk</h3>
+                                        <p>
+                                            Determine which errors are most
+                                            costly and which model behavior
+                                            matters most to the organization.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="process-item">
+                                    <div class="process-number">3</div>
+                                    <div>
+                                        <h3>Select the method</h3>
+                                        <p>
+                                            Choose suitable imputation,
+                                            resampling, class-weighting,
+                                            evaluation, or drift-detection
+                                            techniques.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="process-item">
+                                    <div class="process-number">4</div>
+                                    <div>
+                                        <h3>Validate the decision</h3>
+                                        <p>
+                                            Compare distributions, model
+                                            metrics, business costs, calibration,
+                                            and segment performance.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="process-item">
+                                    <div class="process-number">5</div>
+                                    <div>
+                                        <h3>Revise using feedback</h3>
+                                        <p>
+                                            Strengthen the initial solution by
+                                            adding quantitative checks and
+                                            production considerations.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="process-item">
+                                    <div class="process-number">6</div>
+                                    <div>
+                                        <h3>Monitor after deployment</h3>
+                                        <p>
+                                            Track data quality, drift,
+                                            performance, operational metrics,
+                                            and business outcomes over time.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="subsection-heading">
+                                Monitoring large language model systems
+                            </h3>
+
+                            <p>
+                                Compared with traditional machine learning,
+                                large language models introduce additional
+                                monitoring concerns because their outputs can be
+                                non-deterministic, difficult to score, and
+                                sensitive to prompt changes and context.
+                            </p>
+
+                            <ul class="artifact-list">
+                                <li>Monitor hallucinations and factual accuracy.</li>
+                                <li>Track prompt versions and model settings.</li>
+                                <li>Evaluate safety, bias, and jailbreak risks.</li>
+                                <li>Monitor retrieval quality and tool usage.</li>
+                                <li>Track token cost, latency, and consistency.</li>
+                            </ul>
+                        </section>
+
+                        <section
+                            id="process"
+                            class="artifact-section"
+                        >
+                            <p class="section-label">Process</p>
+
+                            <h2>How the artifact was developed</h2>
+
+                            <div class="process-list">
+                                <div class="process-item">
+                                    <div class="process-number">1</div>
+
+                                    <div>
+                                        <h3>Reviewed each scenario</h3>
+
+                                        <p>
+                                            I identified the technical problem,
+                                            available data, and business
+                                            constraints.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="process-item">
+                                    <div class="process-number">2</div>
+
+                                    <div>
+                                        <h3>Developed an initial response</h3>
+
+                                        <p>
+                                            I proposed a practical approach and
+                                            explained the reasoning behind each
+                                            decision.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="process-item">
+                                    <div class="process-number">3</div>
+
+                                    <div>
+                                        <h3>Reviewed coaching feedback</h3>
+
+                                        <p>
+                                            The AI coach identified areas where
+                                            I could add stronger validation,
+                                            quantitative testing, or business
+                                            analysis.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="process-item">
+                                    <div class="process-number">4</div>
+
+                                    <div>
+                                        <h3>Revised the solution</h3>
+
+                                        <p>
+                                            I added feature-importance checks,
+                                            imputation validation, cost-based
+                                            threshold testing, and statistical
+                                            drift methods.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="process-item">
+                                    <div class="process-number">5</div>
+
+                                    <div>
+                                        <h3>Extended the inquiry</h3>
+
+                                        <p>
+                                            I asked additional questions about
+                                            production monitoring and the
+                                            maintenance of LLM-enabled systems.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="process-item">
+                                    <div class="process-number">6</div>
+
+                                    <div>
+                                        <h3>Revised for the portfolio</h3>
+
+                                        <p>
+                                            I transformed the conversation into
+                                            a professional report and web-based
+                                            portfolio case study with supporting
+                                            evidence.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section
+                            id="tools"
+                            class="artifact-section"
+                        >
+                            <p class="section-label">
+                                Tools and Technologies
+                            </p>
+
+                            <h2>Tools used</h2>
+
+                            <div class="technology-list">
+                                <span>Generative AI</span>
+                                <span>Random Forest</span>
+                                <span>XGBoost</span>
+                                <span>LightGBM</span>
+                                <span>SMOTE</span>
+                                <span>PSI</span>
+                                <span>Kolmogorov-Smirnov Test</span>
+                                <span>Chi-Square Test</span>
+                                <span>Model Monitoring</span>
+                                <span>PDF Documentation</span>
+                                <span>GitHub Pages</span>
+                                <span>HTML and CSS</span>
+                            </div>
+                        </section>
+
+                        <section
+                            id="lessons"
+                            class="artifact-section"
+                        >
+                            <p class="section-label">Lessons Learned</p>
+
+                            <h2>What I learned</h2>
+
+                            <p>
+                                This activity strengthened my understanding
+                                that machine learning decisions must be based
+                                on the meaning of the data, the cost of model
+                                errors, and evidence from validation rather
+                                than assumptions.
+                            </p>
+
+                            <p>
+                                I also learned that deployment is not the end
+                                of the machine learning lifecycle. Models must
+                                be monitored for performance degradation, data
+                                quality problems, changing customer behavior,
+                                and evolving business requirements.
+                            </p>
+                        </section>
+
+                        <section
+                            id="value-proposition"
+                            class="artifact-section"
+                        >
+                            <p class="section-label">
+                                Artifact-Specific Value Proposition
+                            </p>
+
+                            <h2>Unique value and relevance</h2>
+
+                            <div class="value-box">
+                                <h3>Unique Value</h3>
+
+                                <p>
+                                    This artifact demonstrates my ability to
+                                    analyze incomplete and imbalanced data,
+                                    evaluate model behavior using business
+                                    costs, diagnose production drift, and
+                                    improve solutions through structured
+                                    feedback.
+                                </p>
+                            </div>
+
+                            <div class="value-box">
+                                <h3>Professional Relevance</h3>
+
+                                <p>
+                                    This work is relevant to organizations that
+                                    rely on machine learning for customer
+                                    retention, fraud detection, credit risk,
+                                    and AI-enabled decision support. It shows
+                                    that I can connect technical methods with
+                                    operational reliability and business impact.
+                                </p>
+                            </div>
+                        </section>
+
+                        <section
+                            id="evidence"
+                            class="artifact-section"
+                        >
+                            <p class="section-label">Evidence</p>
+
+                            <h2>Scenario evidence and complete report</h2>
+
+                            <div class="evidence-grid">
+                                <figure class="evidence-item">
+                                    <a
+                                        href="assets/evidence/artifact-4/artifact4-scenario1-initial.png"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <img
+                                            src="assets/evidence/artifact-4/artifact4-scenario1-initial.png"
+                                            alt="Initial missing data scenario response"
+                                            loading="lazy"
+                                        >
+                                    </a>
+
+                                    <figcaption>
+                                        Initial analysis of missing values in a
+                                        customer churn dataset.
+                                    </figcaption>
+                                </figure>
+
+                                <figure class="evidence-item">
+                                    <a
+                                        href="assets/evidence/artifact-4/artifact4-scenario1-revision.png"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <img
+                                            src="assets/evidence/artifact-4/artifact4-scenario1-revision.png"
+                                            alt="Missing data feedback and revised response"
+                                            loading="lazy"
+                                        >
+                                    </a>
+
+                                    <figcaption>
+                                        Feedback and revised approach using
+                                        feature importance, missingness analysis,
+                                        and imputation validation.
+                                    </figcaption>
+                                </figure>
+
+                                <figure class="evidence-item">
+                                    <a
+                                        href="assets/evidence/artifact-4/artifact4-scenario2-cost-threshold.png"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <img
+                                            src="assets/evidence/artifact-4/artifact4-scenario2-cost-threshold.png"
+                                            alt="Cost-sensitive fraud detection threshold discussion"
+                                            loading="lazy"
+                                        >
+                                    </a>
+
+                                    <figcaption>
+                                        Cost-sensitive threshold optimization
+                                        for an imbalanced fraud detection model.
+                                    </figcaption>
+                                </figure>
+
+                                <figure class="evidence-item">
+                                    <a
+                                        href="assets/evidence/artifact-4/artifact4-scenario3-drift-analysis.png"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <img
+                                            src="assets/evidence/artifact-4/artifact4-scenario3-drift-analysis.png"
+                                            alt="Data drift and concept drift analysis"
+                                            loading="lazy"
+                                        >
+                                    </a>
+
+                                    <figcaption>
+                                        Analysis of data drift, concept drift,
+                                        statistical testing, and retraining
+                                        options.
+                                    </figcaption>
+                                </figure>
+
+                                <figure class="evidence-item">
+                                    <a
+                                        href="assets/evidence/artifact-4/artifact4-monitoring-discussion.png"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <img
+                                            src="assets/evidence/artifact-4/artifact4-monitoring-discussion.png"
+                                            alt="Production and LLM monitoring discussion"
+                                            loading="lazy"
+                                        >
+                                    </a>
+
+                                    <figcaption>
+                                        Follow-up discussion on production
+                                        monitoring and LLM maintenance.
+                                    </figcaption>
+                                </figure>
+
+                                <figure class="evidence-item">
+                                    <a
+                                        href="assets/evidence/artifact-4/artifact4-completion-summary.png"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <img
+                                            src="assets/evidence/artifact-4/artifact4-completion-summary.png"
+                                            alt="Final AI coaching completion summary"
+                                            loading="lazy"
+                                        >
+                                    </a>
+
+                                    <figcaption>
+                                        Final coaching summary of the three
+                                        machine learning scenarios.
+                                    </figcaption>
+                                </figure>
+
+                                <div class="documentation-card">
+                                    <p class="documentation-label">
+                                        Complete Report
+                                    </p>
+
+                                    <h3>
+                                        Applying Machine Learning to Real-World
+                                        Data Challenges
+                                    </h3>
+
+                                    <p>
+                                        Review the complete inquiry-based
+                                        learning report, revised solutions, and
+                                        key conclusions.
+                                    </p>
+
+                                    <a
+                                        class="button primary-button"
+                                        href="assets/evidence/artifact-4/Aasish_Katwal_Applying_Machine_Learning_to_Real_World_Data_Challenges.pdf"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        View Complete Report
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+
+                        <div class="artifact-navigation">
+                            <a
+                                class="button secondary-button"
+                                href="index.html#artifacts"
+                            >
+                                ← Return to Portfolio
+                            </a>
+
+                            <a
+                                class="button primary-button"
+                                href="#evidence"
+                            >
+                                View Evidence
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Aasish Katwal. All rights reserved.</p>
+    </footer>
 </body>
 </html>
