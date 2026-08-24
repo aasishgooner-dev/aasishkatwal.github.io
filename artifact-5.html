@@ -1,0 +1,407 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Validating a Proprietary Sepsis Prediction Model portfolio artifact by Aasish Katwal.">
+    <title>Validating a Proprietary Sepsis Prediction Model | Aasish Katwal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navigation" aria-label="Main navigation">
+            <a class="logo" href="index.html">Aasish Katwal</a>
+            <div class="nav-links">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#value">Value Proposition</a>
+                <a href="index.html#artifacts">Artifacts</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="artifact-hero">
+            <div class="artifact-page-container">
+                <p class="eyebrow">Professional Portfolio — Artifact 5</p>
+                <h1>Validating a Proprietary Sepsis Prediction Model</h1>
+                <p class="artifact-lead">
+                    An external-validation case study examining model performance,
+                    target leakage, calibration, threshold trade-offs, fairness,
+                    governance, and post-deployment monitoring in a clinical AI system.
+                </p>
+                <div class="artifact-tags">
+                    <span>Model Validation</span>
+                    <span>Healthcare AI</span>
+                    <span>Calibration</span>
+                    <span>Model Monitoring</span>
+                    <span>Responsible AI</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="artifact-content-section">
+            <div class="artifact-page-container">
+                <div class="artifact-layout">
+                    <aside class="artifact-sidebar">
+                        <nav aria-label="Artifact sections">
+                            <p class="sidebar-title">Artifact Sections</p>
+                            <a href="#introduction">Introduction</a>
+                            <a href="#description">Description</a>
+                            <a href="#objective">Objective</a>
+                            <a href="#concepts">Key Concepts</a>
+                            <a href="#process">Process</a>
+                            <a href="#tools">Tools</a>
+                            <a href="#lessons">Lessons Learned</a>
+                            <a href="#value-proposition">Value Proposition</a>
+                            <a href="#references">References</a>
+                            <a href="#evidence">Evidence</a>
+                        </nav>
+                    </aside>
+
+                    <article class="artifact-main">
+                        <section id="introduction" class="artifact-section">
+                            <p class="section-label">Introduction</p>
+                            <h2>Evaluating whether a deployed AI model is truly reliable</h2>
+                            <p>
+                                This artifact analyzes the external validation of the Epic
+                                Sepsis Model, a proprietary prediction system deployed
+                                across many hospitals. The case demonstrates why a model
+                                should not be considered trustworthy simply because it is
+                                widely implemented or performs well in internal testing.
+                            </p>
+                            <p>
+                                The analysis focuses on validation design, target leakage,
+                                discrimination, calibration, threshold trade-offs, alert
+                                burden, fairness, privacy, and continuous monitoring after
+                                deployment.
+                            </p>
+                        </section>
+
+                        <section id="description" class="artifact-section">
+                            <p class="section-label">Description</p>
+                            <h2>Project overview</h2>
+                            <p>
+                                The paper evaluates the published external validation of
+                                the Epic Sepsis Model by Wong et al. (2021). The external
+                                cohort included adult hospitalizations at Michigan Medicine,
+                                and the analysis examined whether the model generalized
+                                beyond the data and health systems used during development.
+                            </p>
+                            <p>
+                                The artifact also evaluates preprocessing transparency,
+                                temporal leakage, calibration, alert fatigue, subgroup
+                                fairness, governance, and the monitoring processes that
+                                should be required before and after deployment.
+                            </p>
+                        </section>
+
+                        <section id="objective" class="artifact-section">
+                            <p class="section-label">Objective</p>
+                            <h2>Project goal</h2>
+                            <p>
+                                The objective was to critically evaluate a real-world
+                                machine learning validation case and determine whether the
+                                model met the technical, operational, and ethical standards
+                                necessary for safe deployment.
+                            </p>
+                            <ul class="artifact-list">
+                                <li>Evaluate external validation rather than relying only on internal model performance.</li>
+                                <li>Identify target leakage and explain how it can inflate performance estimates.</li>
+                                <li>Interpret discrimination, calibration, sensitivity, specificity, and predictive value together.</li>
+                                <li>Connect model thresholds to clinical workload and harm.</li>
+                                <li>Recommend privacy, fairness, governance, and post-deployment monitoring safeguards.</li>
+                            </ul>
+                        </section>
+
+                        <section id="concepts" class="artifact-section">
+                            <p class="section-label">Key Concepts</p>
+                            <h2>Validation and verification concepts demonstrated</h2>
+
+                            <div class="feature-grid">
+                                <div class="feature-card">
+                                    <h3>External Validation</h3>
+                                    <p>The model was evaluated on a different health system and time period from its original development data to test generalizability.</p>
+                                </div>
+                                <div class="feature-card">
+                                    <h3>Target Leakage</h3>
+                                    <p>Allowing post-onset information increased AUC substantially, showing how leakage can create a misleading picture of model quality.</p>
+                                </div>
+                                <div class="feature-card">
+                                    <h3>Calibration</h3>
+                                    <p>Calibration was considered alongside AUC because predicted probabilities must correspond to actual clinical risk to support safe decisions.</p>
+                                </div>
+                                <div class="feature-card">
+                                    <h3>Threshold Trade-offs</h3>
+                                    <p>Lower thresholds increase sensitivity but also increase false alarms and alert fatigue, while higher thresholds reduce burden but miss more cases.</p>
+                                </div>
+                                <div class="feature-card">
+                                    <h3>Fairness and Governance</h3>
+                                    <p>The analysis recommends subgroup performance testing, clinician override authority, access controls, audit logs, and transparent limitations.</p>
+                                </div>
+                                <div class="feature-card">
+                                    <h3>Continuous Monitoring</h3>
+                                    <p>The artifact recommends silent deployment, predefined acceptance gates, periodic revalidation, drift monitoring, incident reporting, and controlled recalibration.</p>
+                                </div>
+                            </div>
+
+                            <h3 class="subsection-heading">Key performance findings</h3>
+
+                            <div class="process-list">
+                                <div class="process-item">
+                                    <div class="process-number">1</div>
+                                    <div>
+                                        <h3>AUC and discrimination</h3>
+                                        <p>At the operational threshold, the hospitalization-level AUC was 0.63, showing limited discrimination in the external setting.</p>
+                                    </div>
+                                </div>
+                                <div class="process-item">
+                                    <div class="process-number">2</div>
+                                    <div>
+                                        <h3>Sensitivity and missed cases</h3>
+                                        <p>Sensitivity was 33%, meaning a large proportion of sepsis cases were not identified by the model.</p>
+                                    </div>
+                                </div>
+                                <div class="process-item">
+                                    <div class="process-number">3</div>
+                                    <div>
+                                        <h3>Positive predictive value</h3>
+                                        <p>PPV was 12%, indicating that many alerts would not correspond to true sepsis cases.</p>
+                                    </div>
+                                </div>
+                                <div class="process-item">
+                                    <div class="process-number">4</div>
+                                    <div>
+                                        <h3>Alert burden</h3>
+                                        <p>The analysis showed substantial clinician workload per true positive, reinforcing that operational usefulness matters alongside statistical performance.</p>
+                                    </div>
+                                </div>
+                                <div class="process-item">
+                                    <div class="process-number">5</div>
+                                    <div>
+                                        <h3>Leakage effect</h3>
+                                        <p>When post-onset scores were admitted, AUC rose to 0.80, demonstrating how leakage can materially distort validation results.</p>
+                                    </div>
+                                </div>
+                                <div class="process-item">
+                                    <div class="process-number">6</div>
+                                    <div>
+                                        <h3>Clinical usefulness</h3>
+                                        <p>The paper argues that net benefit, lead time, calibration, workload, and time-to-action should accompany traditional performance metrics.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="process" class="artifact-section">
+                            <p class="section-label">Process</p>
+                            <h2>How the artifact was developed</h2>
+
+                            <div class="process-list">
+                                <div class="process-item">
+                                    <div class="process-number">1</div>
+                                    <div>
+                                        <h3>Selected a real-world validation case</h3>
+                                        <p>I used the external evaluation of the Epic Sepsis Model as a practical example of validation and verification in healthcare AI.</p>
+                                    </div>
+                                </div>
+                                <div class="process-item">
+                                    <div class="process-number">2</div>
+                                    <div>
+                                        <h3>Reviewed cohort and preprocessing design</h3>
+                                        <p>I examined inclusion criteria, target construction, score timing, and the risks created by proprietary preprocessing.</p>
+                                    </div>
+                                </div>
+                                <div class="process-item">
+                                    <div class="process-number">3</div>
+                                    <div>
+                                        <h3>Evaluated validation methodology</h3>
+                                        <p>I assessed temporal and geographic validation, calibration, horizon testing, threshold analysis, and leakage-sensitive evaluation.</p>
+                                    </div>
+                                </div>
+                                <div class="process-item">
+                                    <div class="process-number">4</div>
+                                    <div>
+                                        <h3>Interpreted performance trade-offs</h3>
+                                        <p>I connected AUC, sensitivity, specificity, PPV, and alert volume to clinical burden and patient risk.</p>
+                                    </div>
+                                </div>
+                                <div class="process-item">
+                                    <div class="process-number">5</div>
+                                    <div>
+                                        <h3>Added ethical and operational safeguards</h3>
+                                        <p>I incorporated privacy, fairness, clinician oversight, governance, monitoring, and revalidation requirements.</p>
+                                    </div>
+                                </div>
+                                <div class="process-item">
+                                    <div class="process-number">6</div>
+                                    <div>
+                                        <h3>Revised for the portfolio</h3>
+                                        <p>I transformed the academic analysis into a professional case study emphasizing practical model-risk and deployment lessons.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="tools" class="artifact-section">
+                            <p class="section-label">Tools and Technologies</p>
+                            <h2>Methods and concepts used</h2>
+                            <div class="technology-list">
+                                <span>External Validation</span>
+                                <span>Logistic Regression</span>
+                                <span>AUC</span>
+                                <span>Calibration</span>
+                                <span>Sensitivity</span>
+                                <span>Specificity</span>
+                                <span>PPV</span>
+                                <span>Target Leakage Analysis</span>
+                                <span>Fairness Evaluation</span>
+                                <span>Model Monitoring</span>
+                                <span>NIST AI RMF</span>
+                                <span>GitHub Pages</span>
+                            </div>
+                        </section>
+
+                        <section id="lessons" class="artifact-section">
+                            <p class="section-label">Lessons Learned</p>
+                            <h2>What I learned</h2>
+                            <p>
+                                The most important lesson was that deployment
+                                convenience and widespread adoption are not evidence that a
+                                machine learning model is valid. Independent external
+                                testing is necessary to determine whether a model
+                                generalizes to a new population and operating environment.
+                            </p>
+                            <p>
+                                I also learned that a single metric such as AUC can hide
+                                important weaknesses. Calibration, sensitivity, PPV, alert
+                                burden, fairness, lead time, and downstream workflow impact
+                                all matter when evaluating whether a model is useful and
+                                safe in practice.
+                            </p>
+                        </section>
+
+                        <section id="value-proposition" class="artifact-section">
+                            <p class="section-label">Artifact-Specific Value Proposition</p>
+                            <h2>Unique value and relevance</h2>
+
+                            <div class="value-box">
+                                <h3>Unique Value</h3>
+                                <p>
+                                    This artifact demonstrates my ability to critically
+                                    evaluate a deployed machine learning model using both
+                                    statistical and operational evidence. It shows that I can
+                                    identify leakage, interpret calibration and threshold
+                                    trade-offs, and connect technical performance to real
+                                    organizational risk.
+                                </p>
+                            </div>
+
+                            <div class="value-box">
+                                <h3>Professional Relevance</h3>
+                                <p>
+                                    This work is relevant to employers and technical teams
+                                    building or deploying AI in high-impact environments.
+                                    It demonstrates an understanding of validation,
+                                    governance, fairness, monitoring, and human oversight—
+                                    all essential for responsible production AI.
+                                </p>
+                            </div>
+                        </section>
+
+                        <section id="references" class="artifact-section">
+                            <p class="section-label">References</p>
+                            <h2>Sources and supporting references</h2>
+
+                            <p>
+                                Tabassi, E. (2023).
+                                <em>Artificial intelligence risk management framework
+                                (AI RMF 1.0)</em> (NIST AI 100-1). National Institute
+                                of Standards and Technology.
+                            </p>
+
+                            <p>
+                                Wong, A., Otles, E., Donnelly, J. P., Krumm, A.,
+                                McCullough, J., DeTroyer-Cooley, O., Pestrue, J.,
+                                Phillips, M., Konye, J., Penoza, C., Ghous, M., &
+                                Singh, K. (2021). External validation of a widely
+                                implemented proprietary sepsis prediction model in
+                                hospitalized patients. <em>JAMA Internal Medicine,
+                                181</em>(8), 1065–1070.
+                            </p>
+                        </section>
+
+                        <section id="evidence" class="artifact-section">
+                            <p class="section-label">Evidence</p>
+                            <h2>Case-study evidence and original report</h2>
+
+                            <div class="evidence-grid">
+                                <figure class="evidence-item">
+                                    <a href="assets/evidence/artifact-5/artifact5-validation-design.png" target="_blank" rel="noopener noreferrer">
+                                        <img src="assets/evidence/artifact-5/artifact5-validation-design.png" alt="Model validation design analysis" loading="lazy">
+                                    </a>
+                                    <figcaption>External-validation design, cohort construction, leakage prevention, and calibration analysis.</figcaption>
+                                </figure>
+
+                                <figure class="evidence-item">
+                                    <a href="assets/evidence/artifact-5/artifact5-performance-analysis.png" target="_blank" rel="noopener noreferrer">
+                                        <img src="assets/evidence/artifact-5/artifact5-performance-analysis.png" alt="Model performance and threshold trade-off analysis" loading="lazy">
+                                    </a>
+                                    <figcaption>Performance metrics, missed-case rate, alert burden, and the effect of target leakage.</figcaption>
+                                </figure>
+
+                                <figure class="evidence-item">
+                                    <a href="assets/evidence/artifact-5/artifact5-ethics-monitoring.png" target="_blank" rel="noopener noreferrer">
+                                        <img src="assets/evidence/artifact-5/artifact5-ethics-monitoring.png" alt="Ethical safeguards and post-deployment monitoring" loading="lazy">
+                                    </a>
+                                    <figcaption>Privacy, fairness, clinician oversight, governance, and lifecycle monitoring safeguards.</figcaption>
+                                </figure>
+
+                                <figure class="evidence-item">
+                                    <a href="assets/evidence/artifact-5/artifact5-critical-lessons.png" target="_blank" rel="noopener noreferrer">
+                                        <img src="assets/evidence/artifact-5/artifact5-critical-lessons.png" alt="Critical lessons from external validation" loading="lazy">
+                                    </a>
+                                    <figcaption>Critical lessons on local validation, reproducibility, governance, and human-AI system monitoring.</figcaption>
+                                </figure>
+
+                                <div class="documentation-card">
+                                    <p class="documentation-label">Complete Report</p>
+                                    <h3>Model Validation and Verification</h3>
+                                    <p>
+                                        Review the complete six-page analysis of external
+                                        validation, model performance, ethical safeguards,
+                                        and post-deployment monitoring.
+                                    </p>
+                                    <a
+                                        class="button primary-button"
+                                        href="assets/evidence/artifact-5/Aasish_Katwal_Model_Validation_and_Verification.pdf"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        View Complete Report
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+
+                        <div class="artifact-navigation">
+                            <a class="button secondary-button" href="index.html#artifacts">
+                                ← Return to Portfolio
+                            </a>
+                            <a class="button primary-button" href="#evidence">
+                                View Evidence
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Aasish Katwal. All rights reserved.</p>
+    </footer>
+</body>
+</html>
